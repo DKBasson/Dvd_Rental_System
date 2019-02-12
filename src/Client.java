@@ -9,7 +9,6 @@ import java.util.ArrayList;
  * @class: 3e
  */
 public class Client{
-
     private Socket socket;
     static ObjectOutputStream out;
     static ObjectInputStream in;
@@ -17,7 +16,6 @@ public class Client{
     private static ArrayList<Customer> custsFromDatabase = new ArrayList<>();
     private static ArrayList<Rental> rentalsFromDatabase = new ArrayList<>();
     private static String response;
-
     public Client(){
         try{
             socket = new Socket("127.0.0.1", 3434);
@@ -35,7 +33,7 @@ public class Client{
             in = new ObjectInputStream(socket.getInputStream());
 
             String msg;
-
+            String test;
             try{
                     msg = gui_text;
                     out.writeObject(msg);
